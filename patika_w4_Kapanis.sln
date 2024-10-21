@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "patika_w4_Kapanis", "patika_w4_Kapanis\patika_w4_Kapanis.csproj", "{EFB42922-EFD6-4945-AFB4-5C3BE2AD1C2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFB42922-EFD6-4945-AFB4-5C3BE2AD1C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFB42922-EFD6-4945-AFB4-5C3BE2AD1C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFB42922-EFD6-4945-AFB4-5C3BE2AD1C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFB42922-EFD6-4945-AFB4-5C3BE2AD1C2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E1880C5-278D-4577-B9BD-B4B80931BB3D}
+	EndGlobalSection
+EndGlobal
