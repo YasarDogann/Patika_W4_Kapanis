@@ -36,64 +36,170 @@ Program akışı:
 4- Kullanıcı evet cevabını verirse 1. aşamaya geri dönünüz, hayır cevabını verirse iyi günler dileyerek uygulamayı sonlandırınız.
 
 
-## Kod
+## 💻 BaseMachine Class Kod
 ```csharp
-//IDepartment arayüzü: tüm departmanlar için bir görev methodu tanımlar
-public interface IDepartment
+public abstract class BaseMachine
 {
-    void PerformTask();  // Görev Methodu tanımlanması
-}
-
-// Company sınıfı : Tüm çalışanlar için ortak özellikleri barındıran abstract bir sınıf
-public abstract class Company : IDepartment
-{
-    // Çalışan için ad soyad ve pozisyon için ortak özellikler (Properties)
-    public string Name { get; set; }
-    public string LastName {  get; set; }
-    public string Position { get; set; }
-
-
-    // Company sınıfı yapıcı methodu.
-    public Company(string name, string lastname,string position)
+    public DateTime Date { get; private set; } // Üretim tarihini saklar
+    public string SerialNumber { get; set; } // Seri numarasını saklar
+    public string Name { get; set; }  // Ürün adını saklar
+    public string Description { get; set; } // Açıklama saklar
+    public string OperatingSystem { get; set; } // İşletim sistemini saklar
+      
+    // Yapıcı Method
+    public BaseMachine(string serialNumber, string name, string description, string operatingSystem)
     {
+        Date = DateTime.Now; // üretim tarihini otomatik atar
+        SerialNumber = serialNumber;
         Name = name;
-        LastName = lastname;
-        Position = position;
+        Description = description;
+        OperatingSystem = operatingSystem;
     }
 
-    // soyut görev methodu: türeyen sınıflar tarafından kullanılmak zorundadır.
-    public abstract void PerformTask();
-}
-
-
-// Employee sınıfı: Company sınıfından miras almıştır. Çalışan için özel görev davranışını tanımlar
-public class Employee : Company
-{
-    // Emplooye yapıcı methodu: Company sınıfı yapıcı methoduna parametreleri iletir.
-    public Employee(string name, string lastname,string position) : base(name, lastname, position) { }
-
-    // PerformTask methodu override eder. Çalışanın isim soyisim ve görevini ekrana yazdırır.
-    public override void PerformTask()
+    // bilgileri yazdırma methodu
+    public virtual void WriteInfos()
     {
-        Console.WriteLine($"{Name} {LastName} şirketin {Position} olarak çalışıyor");
+        Console.WriteLine($"Üretim Tarihi   : {Date}");
+        Console.WriteLine($"Seri Numarası   : {SerialNumber}");
+        Console.WriteLine($"Ürün Adı        : {Name}");
+        Console.WriteLine($"Ürün Açıklaması : {Description}");
+        Console.WriteLine($"İşletim Sistemi : {OperatingSystem}");
+
     }
+
+    //Ürün adını döndüren soyut method
+    public abstract string GetProductName();
+
 }
 ```
 Interface, abstract class tanımlandı. Kalıtım kullanıldı
 
+## 💻 Phone Class Kod
 ```csharp
- static void Main(string[] args)
- {
-     Employee employee = new Employee("Yaşar", "Doğan", "Yazılım Mühendisi");
-     employee.PerformTask();
+public class Phone : BaseMachine
+{
+    private bool trLicance;  // Tr lisans durumu
 
-     Console.WriteLine("\r\n*********************************************************\r\n");
+    public bool TrLicance  // Tr lisans özelliği
+    {
+        get { return trLicance; }
+        set
+        {
+            trLicance = value; //değeri  ayarladık
+            if (trLicance)  // lisans durum kontrolü
+            {
+                Console.WriteLine("Tr Lisans Mevcut");
+            }
+        }
+    }
 
-     Employee employee2 = new Employee("Hasan", "Çıldırmış", "Proje Yöneticisi");
-     employee2.PerformTask();
- }
+    // yapıcı method : base 
+    public Phone(string serialNumber, string name, string description, string operatingSystem, bool trLicance) : base(serialNumber, name, description, operatingSystem)
+    {
+        TrLicance = trLicance; // Tr lisansı ayarlanıyor
+    }
+
+    // ürün adını döndürme methodu : override
+    public override string GetProductName()
+    {
+        return $"Telefon Adı : {Name}";
+    }
+
+    // bilgileri yazdırma methodu : override
+    public override void WriteInfos()
+    {
+        base.WriteInfos(); // Base sınıf bilgileri yazdırlı
+        Console.WriteLine($"Tr Lisans Durum : {TrLicance}"); // lisans durumu yazdırılır
+        Console.WriteLine(GetProductName());  // telefon adı yazdırılır
+    }
+}
 ```
-Main method içinde sınıftan nesneler oluşturuldu.
 
+## 💻 Computer Class Kod
+```csharp
+public class Computer : BaseMachine
+{
+    private int usbIn; // Usb giriş sayısı
 
+    public int UsbIn // usb giriş sayısı özelliği
+    {
+        get { return usbIn; }
 
+        set
+        {
+            if ((value == 2) || (value == 4)) // geçerli sayı kontrolü
+            {
+                usbIn = value; // değer ayarlanıyor
+            }
+            else
+            {
+                usbIn = -1; // geçersiz değer
+                Console.WriteLine($"2 veya 4 adet port verilmediği için {usbIn} değeri oldu");  // hata mesajı
+            }
+        }
+    }
+
+    private bool bluetooth;  // bluetooth durumu
+    bool Bluetooth  // bluetooth özelliği
+    {
+        get { return bluetooth; }
+        set
+        {
+            bluetooth = value; // Değer ayarlama
+            if (bluetooth)  // bluetooh durum kontrolü
+            {
+                Console.WriteLine("Bluetooth mevcut");
+            }
+        }
+    }
+
+    // yapıcı method
+    public Computer(string serialNumber, string name, string description, string operatingSystem, int usbIn, bool bluetooth) : base(serialNumber, name, description, operatingSystem)
+    {
+        UsbIn = usbIn;  // usb girişi ayarlanır
+        Bluetooth = bluetooth; // bluetooh durumu ayarlanır
+    }
+
+    // ürün adını döndüren method : override
+    public override string GetProductName()
+    {
+        return $"Bilgisyarınızın Adı : {Name}";
+    }
+
+    // Bilgileri ekrana yazdırma : override
+    public override void WriteInfos()
+    {
+        base.WriteInfos();
+        Console.WriteLine(GetProductName());
+    }
+
+}
+```
+
+## 🔥 Main Method Kod
+```csharp
+static void Main(string[] args)
+{
+    // Telefon nesnesi oluşturuldu.  TR lisansı: True 
+    Phone iphone = new Phone("AA1","İphone 13", "Eşsiz Tasarım", "IOS",true);
+    iphone.WriteInfos();
+
+    Console.WriteLine("\r\n-----------------------------------------\r\n");
+
+    // bilgisayar nesnesi oluşturuldu. Usb giriş: 2 ve Bluetooth: True
+    Computer monster = new Computer("BB2","Monster","Güçlü Dizüstü Bilgisayar","Windows",2,true);
+    monster.WriteInfos();
+
+    Console.WriteLine("\r\n-----------------------------------------\r\n");
+
+    // Telefon2 nesnes oluşturuldu. TR Lisansı: False
+    Phone samsung = new Phone("AA2", "S24 Ultra", "Sen nesin bee öyle bişey", "Android", false);
+    samsung.WriteInfos();
+
+    Console.WriteLine("\r\n-----------------------------------------\r\n");
+
+    // Computer2 nesnesi oluşturuldu. Usb Giri: 3 ve Blueetooth: False
+    Computer dell = new Computer("BB2", "Dell XPS", "Güçlü bir dizüstü bilgisayar.", "Windows 10", 3, false);
+    dell.WriteInfos();
+}
+```
