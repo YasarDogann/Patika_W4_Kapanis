@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{EFB42922-EFD6-4945-AFB4-5C3BE2AD1C2D}|patika_w4_Kapanis\\patika_w4_Kapanis.csproj|solutionrelative:patika_w4_kapanis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EFB42922-EFD6-4945-AFB4-5C3BE2AD1C2D}|patika_w4_Kapanis\\patika_w4_Kapanis.csproj|c:\\users\\yasar\\source\\repos\\patika\u002B\\week4\\patika_w4_kapanis\\patika_w4_kapanis\\basemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFB42922-EFD6-4945-AFB4-5C3BE2AD1C2D}|patika_w4_Kapanis\\patika_w4_Kapanis.csproj|solutionrelative:patika_w4_kapanis\\basemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EFB42922-EFD6-4945-AFB4-5C3BE2AD1C2D}|patika_w4_Kapanis\\patika_w4_Kapanis.csproj|c:\\users\\yasar\\source\\repos\\patika\u002B\\week4\\patika_w4_kapanis\\patika_w4_kapanis\\computer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EFB42922-EFD6-4945-AFB4-5C3BE2AD1C2D}|patika_w4_Kapanis\\patika_w4_Kapanis.csproj|solutionrelative:patika_w4_kapanis\\computer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EFB42922-EFD6-4945-AFB4-5C3BE2AD1C2D}|patika_w4_Kapanis\\patika_w4_Kapanis.csproj|c:\\users\\yasar\\source\\repos\\patika\u002B\\week4\\patika_w4_kapanis\\patika_w4_kapanis\\phone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EFB42922-EFD6-4945-AFB4-5C3BE2AD1C2D}|patika_w4_Kapanis\\patika_w4_Kapanis.csproj|solutionrelative:patika_w4_kapanis\\phone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFB42922-EFD6-4945-AFB4-5C3BE2AD1C2D}|patika_w4_Kapanis\\patika_w4_Kapanis.csproj|c:\\users\\yasar\\source\\repos\\patika\u002B\\week4\\patika_w4_kapanis\\patika_w4_kapanis\\basemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFB42922-EFD6-4945-AFB4-5C3BE2AD1C2D}|patika_w4_Kapanis\\patika_w4_Kapanis.csproj|solutionrelative:patika_w4_kapanis\\basemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Computer.cs",
               "DocumentMoniker": "C:\\Users\\yasar\\source\\repos\\Patika\u002B\\week4\\patika_w4_Kapanis\\patika_w4_Kapanis\\Computer.cs",
               "RelativeDocumentMoniker": "patika_w4_Kapanis\\Computer.cs",
@@ -38,12 +38,11 @@
               "RelativeToolTip": "patika_w4_Kapanis\\Computer.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwCYAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T06:33:44.468Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T06:33:44.468Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Phone.cs",
               "DocumentMoniker": "C:\\Users\\yasar\\source\\repos\\Patika\u002B\\week4\\patika_w4_Kapanis\\patika_w4_Kapanis\\Phone.cs",
               "RelativeDocumentMoniker": "patika_w4_Kapanis\\Phone.cs",
@@ -51,18 +50,17 @@
               "RelativeToolTip": "patika_w4_Kapanis\\Phone.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwBMAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T06:20:01.011Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T06:20:01.011Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "BaseMachine.cs",
               "DocumentMoniker": "C:\\Users\\yasar\\source\\repos\\Patika\u002B\\week4\\patika_w4_Kapanis\\patika_w4_Kapanis\\BaseMachine.cs",
               "RelativeDocumentMoniker": "patika_w4_Kapanis\\BaseMachine.cs",
-              "ToolTip": "C:\\Users\\yasar\\source\\repos\\Patika\u002B\\week4\\patika_w4_Kapanis\\patika_w4_Kapanis\\BaseMachine.cs",
-              "RelativeToolTip": "patika_w4_Kapanis\\BaseMachine.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAABCAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\yasar\\source\\repos\\Patika\u002B\\week4\\patika_w4_Kapanis\\patika_w4_Kapanis\\BaseMachine.cs*",
+              "RelativeToolTip": "patika_w4_Kapanis\\BaseMachine.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-21T06:14:57.695Z",
               "EditorCaption": ""

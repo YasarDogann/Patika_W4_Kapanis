@@ -8,20 +8,23 @@ namespace patika_w4_Kapanis
 {
     public abstract class BaseMachine
     {
-        public DateTime Date { get; private set; }
-        public string SerialNumber { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public string OperatingSystem { get; set; }
-
+        public DateTime Date { get; private set; } // Üretim tarihini saklar
+        public string SerialNumber { get; set; } // Seri numarasını saklar
+        public string Name { get; set; }  // Ürün adını saklar
+        public string Description { get; set; } // Açıklama saklar
+        public string OperatingSystem { get; set; } // İşletim sistemini saklar
+          
+        // Yapıcı Method
         public BaseMachine(string serialNumber, string name, string description, string operatingSystem)
         {
-            Date = DateTime.Now;
+            Date = DateTime.Now; // üretim tarihini otomatik atar
             SerialNumber = serialNumber;
             Name = name;
             Description = description;
             OperatingSystem = operatingSystem;
         }
+
+        // bilgileri yazdırma methodu
         public virtual void WriteInfos()
         {
             Console.WriteLine($"Üretim Tarihi   : {Date}");
@@ -32,6 +35,7 @@ namespace patika_w4_Kapanis
 
         }
 
+        //Ürün adını döndüren soyut method
         public abstract string GetProductName();
 
     }
